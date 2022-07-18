@@ -1,0 +1,46 @@
+.pagination-list {
+  align-items: center;
+  margin-top: 60px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  list-style: none;
+}
+
+// .pagination-item {
+
+// }
+
+.pagination-button {
+  border: none;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+
+  color: #474747;
+}
+
+.arrow-button {
+  background-color: transparent;
+  padding: 11px 13px;
+  border: 1px solid #474747;
+  border-radius: 3px;
+}
+
+@media only screen and (max-width: 500px) {
+  .pagination-list {
+    gap: 8px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .pagination-list {
+    gap: 4px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .pagination-list {
+    gap: 2px;
+  }
+}

@@ -1,0 +1,46 @@
+.info {
+  &__heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height, or 150% */
+
+    /* Main / Primary 2 */
+
+    color: #474747;
+  }
+
+  &__text {
+    margin-right: 109px;
+    width: 328px;
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #474747;
+  }
+
+  &__link {
+    gap: 12px;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #474747;
+
+    &__img {
+      background: #f4f4f4;
+      border-radius: 3px;
+      padding: 6px 8px;
+    }
+  }
+
+  &__socials {
+    margin-top: 52px;
+    gap: 26px;
+    display: flex;
+  }
+}

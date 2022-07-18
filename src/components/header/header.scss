@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 26px;
+}
+
+.header-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 878px;
+}
+
+@media only screen and (max-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
+  .header {
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .header {
+    flex-direction: column;
+  }
+  .header-left {
+    // justify-content: center;
+    width: 100%;
+  }
+}

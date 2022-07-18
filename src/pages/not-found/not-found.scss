@@ -1,0 +1,40 @@
+.not-found {
+  text-align: center;
+  margin: 0 auto;
+  &__link {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    margin-bottom: 71px;
+    text-align: center;
+    color: #474747;
+  }
+
+  &__heading {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #474747;
+  }
+
+  &__text {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 607px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &__img {
+    margin-top: 84px;
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,43 @@
+.loader {
+  width: 100px;
+  height: 100px;
+  //   position: relative;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    margin-left: 45%;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    mix-blend-mode: multiply;
+    animation: rotate 1s infinite cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  &::before {
+    background-color: #fc3f9e;
+  }
+
+  &::after {
+    background-color: #50e8f3;
+    animation-delay: 0.5s;
+  }
+}
+
+@keyframes rotate {
+  0%,
+  100% {
+    left: 95px;
+  }
+  25% {
+    transform: scale(0.3);
+  }
+
+  50% {
+    left: 0;
+  }
+  75% {
+    transform: scale(1);
+  }
+}
