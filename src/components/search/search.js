@@ -8,7 +8,7 @@ const Search = () => {
 
   const { posts, setFilteredPosts } = useContext(PostsContext);
 
-  console.log(posts);
+  // console.log(posts);
 
   // const [search, setSearch] = useState("");
 
