@@ -12,7 +12,6 @@ const NavBar = () => {
 
   const { posts, setFilteredPosts } = useContext(PostsContext);
 
-  console.log(posts);
 
   const handleDesignLabelClick = (evt) => {
     evt.preventDefault();

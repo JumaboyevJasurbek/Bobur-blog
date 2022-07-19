@@ -22,7 +22,7 @@ const Pagination = () => {
     <div className="container">
       <ol className="pagination-list" onClick={hanlePaginationClick}>
         <li>
-          <button className="arrow-button">
+          <button disabled className="arrow-button">
             <img src={paginationLeft} alt="" />
           </button>
         </li>
@@ -36,7 +36,7 @@ const Pagination = () => {
             </li>
           ))}
         <li>
-          <button className="arrow-button">
+          <button disabled className="arrow-button">
             <img src={paginationRight} alt="" />
           </button>
         </li>

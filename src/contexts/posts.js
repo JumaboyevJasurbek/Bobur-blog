@@ -6,7 +6,6 @@ export const PostsContext = createContext();
 
 const PostsProvider = (props) => {
   const [posts, setPosts] = useState();
-
   const [filteredPosts, setFilteredPosts] = useState();
 
   const [paginationPosts, setPaginationPosts] = useState();
