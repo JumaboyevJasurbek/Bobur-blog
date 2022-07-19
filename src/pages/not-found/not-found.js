@@ -2,7 +2,6 @@ import "./not-found.scss";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/auth";
-import Header from "../../components/header/header";
 import "./not-found.scss";
 import notFound from "../../assets/img/404-img.svg";
 
