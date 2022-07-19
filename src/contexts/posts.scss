@@ -41,3 +41,13 @@
     transform: scale(1);
   }
 }
+
+@media only screen and (max-width: 520px) {
+  .loader {
+    &::before,
+    &::after {
+      content: "";
+      margin-left: 25%;
+    }
+  }
+}

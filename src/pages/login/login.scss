@@ -46,3 +46,20 @@
     text-align: center;
   }
 }
+
+@media only screen and (max-width: 370px) {
+  .login {
+    &__form {
+      width: 340px;
+    }
+
+    &__input {
+      width: 335px;
+      padding: 11px 10px;
+    }
+
+    &__button {
+      padding: 10px 141px;
+    }
+  }
+}
