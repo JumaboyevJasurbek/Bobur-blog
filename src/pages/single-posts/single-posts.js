@@ -26,10 +26,6 @@ const SinglePosts = () => {
 
       <main className="container">
         <SinglePost post={currentPost} />
-        {/* <form onSubmit={handleFormSubmit}>
-          <input ref={titleRef} defaultValue={currentPost.title} type="text" />
-          <button>Submit</button>
-        </form> */}
       </main>
 
       <Footer />

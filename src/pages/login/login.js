@@ -39,7 +39,6 @@ const Login = () => {
           }
         })
         .then((data) => {
-          console.log(data);
           setToken(data.token);
           navigate("/");
         })
@@ -61,6 +60,7 @@ const Login = () => {
           name="email"
           placeholder="Email"
           type="email"
+          required
         />
         <input
           className="login__input"
@@ -69,6 +69,7 @@ const Login = () => {
           name="password"
           placeholder="Password"
           type="password"
+          required
         />
         <button className="login__button" disabled={loading} type="submit">
           Submit

@@ -4,10 +4,14 @@ import clock from "../../assets/img/clock.png";
 import Like from "../../assets/img/like.png";
 import Share from "../../assets/img/share.png";
 import SingleImg from "../../assets/img/single-main-img.png";
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 import { PostsContext } from "../../contexts/posts";
+
 const SinglePost = ({ post }) => {
   const { postId } = useParams();
+
+  const [countLIke, setLIkeCount] = useState(125);
+  const [countShare, setShareCount] = useState(70);
 
   const { posts, setPosts } = useContext(PostsContext);
 
@@ -32,17 +36,25 @@ const SinglePost = ({ post }) => {
     setPosts(newPosts);
   };
 
+  function handlyIncreamentLikeClick() {
+    setLIkeCount(countLIke + 1);
+  }
+
+  function handlyIncreamentShareClick() {
+    setShareCount(countShare + 1);
+  }
+
   return (
     <article className=" post post1">
       <div className="single__left">
-        <div className="single__like">
+        <button onClick={handlyIncreamentLikeClick} className="single__like">
           <img src={Like} alt="" />
-          <p className="single__like__text">125</p>
-        </div>
-        <div className="single__share">
+          <p className="single__like__text">{countLIke}</p>
+        </button>
+        <button onClick={handlyIncreamentShareClick} className="single__share">
           <img src={Share} alt="" />
-          <p className="single__share__text">70</p>
-        </div>
+          <p className="single__share__text">{countShare}</p>
+        </button>
       </div>
 
       <div className="post1__right">
@@ -85,7 +97,7 @@ const SinglePost = ({ post }) => {
         </div>
         <img className="post1__main-img" src={SingleImg} alt="" />
 
-        <p>{post.body}</p>
+        <p className="single__post-body">{post.body}</p>
       </div>
       {/* <div className="post__data">{post.type}</div> */}
     </article>

@@ -10,7 +10,7 @@ const NotFound = () => {
   const { token } = useContext(AuthContext);
   return (
     <div className="not-found">
-      <Header />
+      {/* <Header /> */}
 
       <div className="container not-found">
         <div className="not-found__img">

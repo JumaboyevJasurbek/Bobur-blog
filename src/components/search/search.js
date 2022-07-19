@@ -8,6 +8,8 @@ const Search = () => {
 
   const { posts, setFilteredPosts } = useContext(PostsContext);
 
+  console.log(posts);
+
   // const [search, setSearch] = useState("");
 
   const handleFilterSubmit = (evt) => {
@@ -18,7 +20,6 @@ const Search = () => {
     const FiltredPosts = posts.filter((post) =>
       post.title.includes(inputValue)
     );
-    // console.log(FiltredPosts);
 
     setFilteredPosts(FiltredPosts);
   };
