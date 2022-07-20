@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import Footer from "../../components/footer/footer";
 import Header from "../../components/header/header";
-import UxSingle from "../../components/ux-single/ux-single";
+import NavSinglePost from "../../components/nav-single-post/nav-single-post";
 import { PostsContext } from "../../contexts/posts";
 
 const UxPages = () => {
@@ -11,7 +11,7 @@ const UxPages = () => {
     <>
       <Header />
       {filteredPosts?.map((type) => (
-        <UxSingle type={type} key={type.id} />
+        <NavSinglePost type={type} key={type.id} />
       ))}
       <Footer />
     </>

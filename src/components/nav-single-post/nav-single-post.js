@@ -1,6 +1,6 @@
 import clock from "../../assets/img/clock.png";
 
-const TypographSingle = ({ type }) => {
+const NavSinglePost = ({ type }) => {
   return (
     <article className="post">
       <div className="container">
@@ -21,4 +21,4 @@ const TypographSingle = ({ type }) => {
   );
 };
 
-export default TypographSingle;
+export default NavSinglePost;

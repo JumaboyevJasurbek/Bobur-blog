@@ -13,41 +13,34 @@ const NavBar = () => {
   const { posts, setFilteredPosts } = useContext(PostsContext);
   // const { setPosts } = useContext(PostsContext);
 
-  const handleClickAll = () => {
-    const all = posts.filter((post) => post.type === "Design Theory" && "All");
-    console.log(all);
+  const handleClickAll = (evt) => {
+    const typesName = evt.target.dataset.value;
+    const filteredAll = posts?.filter((all) => all.types === typesName);
+    setFilteredPosts(typesName === "All" ? posts : filteredAll);
   };
 
   const handleDesignLabelClick = (evt) => {
-    evt.preventDefault();
-
     const FiltredDesign = posts.filter((post) => post.type === "Design Theory");
 
     setFilteredPosts(FiltredDesign);
   };
 
-  const handleUxLabelClick = (evt) => {
-    evt.preventDefault();
+  const handleUxLabelClick = () => {
+    const FiltredUx = posts.filter((post) => post.type === "UX");
 
-    const FiltredDesign = posts.filter((post) => post.type === "UX");
-
-    setFilteredPosts(FiltredDesign);
+    setFilteredPosts(FiltredUx);
   };
 
-  const handleUiLabelClick = (evt) => {
-    evt.preventDefault();
+  const handleUiLabelClick = () => {
+    const FiltredUI = posts.filter((post) => post.type === "UI");
 
-    const FiltredDesign = posts.filter((post) => post.type === "UI");
-
-    setFilteredPosts(FiltredDesign);
+    setFilteredPosts(FiltredUI);
   };
 
-  const handleTypographLabelClick = (evt) => {
-    evt.preventDefault();
+  const handleTypographLabelClick = () => {
+    const FiltredTypograph = posts.filter((post) => post.type === "Typography");
 
-    const FiltredDesign = posts.filter((post) => post.type === "Typography");
-
-    setFilteredPosts(FiltredDesign);
+    setFilteredPosts(FiltredTypograph);
   };
 
   return (

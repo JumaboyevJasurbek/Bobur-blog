@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import DesignSingle from "../../components/design-single/design-single";
 import Footer from "../../components/footer/footer";
 import Header from "../../components/header/header";
 // import { useParams } from "react-router-dom";
 import { PostsContext } from "../../contexts/posts";
+import NavSinglePost from "../../components/nav-single-post/nav-single-post";
 
 const DesignPages = () => {
   const { filteredPosts } = useContext(PostsContext);
@@ -12,7 +12,7 @@ const DesignPages = () => {
     <>
       <Header />
       {filteredPosts?.map((type) => (
-        <DesignSingle type={type} key={type.id} />
+        <NavSinglePost type={type} key={type.id} />
       ))}
       <Footer />
     </>

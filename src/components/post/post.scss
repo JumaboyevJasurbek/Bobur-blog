@@ -56,7 +56,7 @@
   .post {
     max-width: 600px;
     &__title {
-      max-width: 300px;
+      max-width: 500px;
     }
   }
 }
@@ -65,8 +65,21 @@
   .post {
     max-width: 500px;
     &__title {
-      max-width: 200px;
+      max-width: 400px;
     }
+  }
+}
+
+@media only screen and (max-width: 1030px) {
+  .post {
+    max-width: 500px;
+    &__title {
+      max-width: 350px;
+    }
+
+    // &__time {
+    //   width: 400px;
+    // }
   }
 }
 
@@ -79,7 +92,7 @@
     flex-direction: column-reverse;
 
     &__right {
-      align-items: center;
+      align-items: flex-start;
     }
 
     &__title {
@@ -97,7 +110,7 @@
 @media only screen and (max-width: 850px) {
   .post {
     &__right {
-      align-items: center;
+      justify-content: center;
       display: flex;
       flex-direction: column;
     }
