@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/auth";
 import "./not-found.scss";
 import notFound from "../../assets/img/404-img.svg";
+import Header from "../../components/header/header";
 
 const NotFound = () => {
   const { token } = useContext(AuthContext);
   return (
     <div className="not-found">
-      {/* <Header /> */}
+      <Header />
 
       <div className="container not-found">
         <div className="not-found__img">
