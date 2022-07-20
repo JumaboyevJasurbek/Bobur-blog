@@ -11,13 +11,17 @@ const NavBar = () => {
   const handleClick = () => setClick(!click);
 
   const { posts, setFilteredPosts } = useContext(PostsContext);
+  // const { setPosts } = useContext(PostsContext);
+
+  const handleClickAll = () => {
+    const all = posts.filter((post) => post.type === "Design Theory" && "All");
+    console.log(all);
+  };
 
   const handleDesignLabelClick = (evt) => {
     evt.preventDefault();
 
     const FiltredDesign = posts.filter((post) => post.type === "Design Theory");
-
-    console.log(FiltredDesign);
 
     setFilteredPosts(FiltredDesign);
   };
@@ -27,8 +31,6 @@ const NavBar = () => {
 
     const FiltredDesign = posts.filter((post) => post.type === "UX");
 
-    console.log(FiltredDesign);
-
     setFilteredPosts(FiltredDesign);
   };
 
@@ -36,8 +38,6 @@ const NavBar = () => {
     evt.preventDefault();
 
     const FiltredDesign = posts.filter((post) => post.type === "UI");
-
-    console.log(FiltredDesign);
 
     setFilteredPosts(FiltredDesign);
   };
@@ -47,8 +47,6 @@ const NavBar = () => {
 
     const FiltredDesign = posts.filter((post) => post.type === "Typography");
 
-    console.log(FiltredDesign);
-
     setFilteredPosts(FiltredDesign);
   };
 
@@ -56,11 +54,11 @@ const NavBar = () => {
     <>
       <div className={click ? "nav-1 nav-active" : "nav"}>
         <form className="nav__list">
-          <div className="nav__item">
+          <label onClick={handleClickAll} typeof="radio" className="nav__item">
             <Link to="/" className="nav__link nav__link--active">
               All
             </Link>
-          </div>
+          </label>
           <label
             onClick={handleDesignLabelClick}
             typeof="radio"
